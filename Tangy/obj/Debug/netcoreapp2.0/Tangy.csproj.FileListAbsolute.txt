@@ -3,10 +3,10 @@ C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\bin\Debug\netcoreapp2.0\Tangy.runt
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\bin\Debug\netcoreapp2.0\Tangy.runtimeconfig.dev.json
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\bin\Debug\netcoreapp2.0\Tangy.dll
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\bin\Debug\netcoreapp2.0\Tangy.pdb
-C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.csprojAssemblyReference.cache
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.csproj.CoreCompileInputs.cache
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.AssemblyInfoInputs.cache
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.AssemblyInfo.cs
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.dll
 C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.pdb
+C:\Users\sasmita\Documents\GitHub\Tangy\Tangy\obj\Debug\netcoreapp2.0\Tangy.csprojAssemblyReference.cache
