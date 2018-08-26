@@ -13,14 +13,11 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.AuthorId)
+                        @Html.DisplayNameFor(model => model.Id)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.FirstName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LastName)
-                    </th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>                   
                     <th>
                        Book
                     </th>
@@ -32,19 +29,16 @@
                 {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AuthorId)
+                        @Html.DisplayFor(modelItem => item.Id)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
+                        @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
+                        @Html.DisplayFor(modelItem => item.Books.FirstOrDefault().Name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Books.FirstOrDefault().Title)
-                    </td>
-                    <td>
-                        @Html.Partial("_TableButtonPartial", item.AuthorId)
+                        @Html.Partial("_TableButtonPartial", item.Id)
                     </td>
                 </tr>
                 }

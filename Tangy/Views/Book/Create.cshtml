@@ -1,0 +1,44 @@
+﻿@model Tangy.Models.BookViewModel.BookAndAuthorViewModel
+@using Tangy.Extensions
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<h2>Create Book</h2>
+<br />
+<hr />
+<form asp-action="Create">
+    <div class="form-border">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Book.Name" class="control-label"></label>
+            </div>
+            <div class="col-4">
+                <input asp-for="Book.Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Book.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Book.Author" class="control-label"></label>
+            </div>
+            <div class="col-4">
+                <select asp-for="Book.AuthorId" asp-items="Model.AuthorList.ToSelectListItem(Model.Book.AuthorId)" class="form-control"></select>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-default" />&nbsp;
+            <a asp-action="Index" class="btn btn-success">Back to List</a>
+        </div>
+    </div>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

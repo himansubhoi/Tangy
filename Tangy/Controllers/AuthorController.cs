@@ -34,7 +34,7 @@ namespace Tangy.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AuthorId,FirstName,LastName")] Author author)
+        public async Task<IActionResult> Create(Author author)
         {
             if (ModelState.IsValid)
             {

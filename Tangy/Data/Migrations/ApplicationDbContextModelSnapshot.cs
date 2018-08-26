@@ -181,28 +181,26 @@ namespace Tangy.Data.Migrations
 
             modelBuilder.Entity("Tangy.Models.Author", b =>
                 {
-                    b.Property<int>("AuthorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("Name");
 
-                    b.Property<string>("LastName");
-
-                    b.HasKey("AuthorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Authors");
                 });
 
             modelBuilder.Entity("Tangy.Models.Book", b =>
                 {
-                    b.Property<int>("BookId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("AuthorId");
+                    b.Property<int>("AuthorId");
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Name");
 
-                    b.HasKey("BookId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
 
@@ -290,7 +288,8 @@ namespace Tangy.Data.Migrations
                 {
                     b.HasOne("Tangy.Models.Author", "Author")
                         .WithMany("Books")
-                        .HasForeignKey("AuthorId");
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Tangy.Models.SubCategory", b =>

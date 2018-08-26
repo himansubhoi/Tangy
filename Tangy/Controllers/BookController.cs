@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tangy.Data;
+using Tangy.Models;
+using Tangy.Models.BookViewModel;
 
 namespace Tangy.Controllers
 {
@@ -16,8 +18,36 @@ namespace Tangy.Controllers
             _context = context;
         }
         public async Task<IActionResult> Index()
-        {
+        {          
             return View(await _context.Books.Include(book=>book.Author).ToListAsync());
+        }
+
+        // GET: Categories/Create
+        public IActionResult Create()
+        {
+            BookAndAuthorViewModel model = new BookAndAuthorViewModel()
+            {
+                AuthorList =  _context.Authors.ToList(),
+                Book = new Book()
+               
+            };
+            return View(model);           
+        }
+
+        // POST: Categories/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(book);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(book);
         }
     }
 }
